@@ -8,26 +8,26 @@ pipeline{
     }
     stage('Build'){
       steps{
-        bat 'echo "building the app"'
+        sh 'echo "building the app"'
       }
     }
     stage('Test'){
       steps{
-        bat 'echo "Running tests"'
+        sh 'echo "Running tests"'
       }
     }
     stage('Deploy'){
       steps{
-        bat 'echo "deploying"'
+        sh 'echo "deploying"'
       }
     }
   }
 }
 post{
   sucess{
-    bat 'echo "build successful"'
+    sh 'echo "build successful"'
   }
   failure{
-    bat 'echo "build failed"'
+    sh 'echo "build failed"'
   }
 }
