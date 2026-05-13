@@ -22,12 +22,13 @@ pipeline{
       }
     }
   }
-}
-post{
-  sucess{
-    sh 'echo "build successful"'
+  post{
+    sucess{
+      sh 'echo "build successful"'
+    }
+    failure{
+      sh 'echo "build failed"'
+    }
   }
-  failure{
-    sh 'echo "build failed"'
-  }
 }
+
